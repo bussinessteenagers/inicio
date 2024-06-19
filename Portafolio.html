@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Be You', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecdeff;
+        }
+        header {
+            background-color: #6b5879;
+            color: rgb(255, 255, 255);
+            padding: 10px 0;
+            text-align: center;
+            font-size: 30px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .container img:hover {
+            transform: scale(1.05);
+        }
+        nav {
+            background-color: #8f4f6d;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-family: 'Hey Comic', sans-serif;
+        }
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+            text-align: center;
+        }
+        .modal img {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal label {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .modal label:hover,
+        .modal label:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
+        .modal:target {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="nuestrapagina web.html">Inicio</a></li>
+                <li><a href="inicio2.html">Información</a></li>
+                <li><a href="Portafolio.html">Portafolio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="formularios reveca.php">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header>
+        <h1>Portafolio de Imágenes</h1>
+    </header>
+    <div class="container">
+        <a href="#img1"><img src="8.jpeg" alt="Imagen 1"></a>
+        <a href="#img2"><img src="9.jpeg" alt="Imagen 2"></a>
+        <a href="#img3"><img src="5.jpeg" alt="Imagen 3"></a>
+        <a href="#img4"><img src="2.jpeg" alt="Imagen 4"></a>
+        <a href="#img5"><img src="7.jpeg" alt="Imagen 5"></a>
+    </div>
+    <p>
+        <button align="center" onclick="window.location.href='nuestrapagina web.html'">
+            <img src="atras.png" width="30">
+        </button>
+    </p>
+    <nav>
+        <p>Busssines Teenagers 2024 Ⓒ Todos los Derechos Reservados.</p>
+    </nav>
+
+    <!-- Modales para las imágenes -->
+    <div id="img1" class="modal">
+        <label for="img1" class="close" onclick="window.location='#'">&times;</label>
+        <img src="8.jpeg" alt="Imagen 1">
+    </div>
+    <div id="img2" class="modal">
+        <label for="img2" class="close" onclick="window.location='#'">&times;</label>
+        <img src="9.jpeg" alt="Imagen 2">
+    </div>
+    <div id="img3" class="modal">
+        <label for="img3" class="close" onclick="window.location='#'">&times;</label>
+        <img src="5.jpeg" alt="Imagen 3">
+    </div>
+    <div id="img4" class="modal">
+        <label for="img4" class="close" onclick="window.location='#'">&times;</label>
+        <img src="2.jpeg" alt="Imagen 4">
+    </div>
+    <div id="img5" class="modal">
+        <label for="img5" class="close" onclick="window.location='#'">&times;</label>
+        <img src="7.jpeg" alt="Imagen 5">
+    </div>
+</body>
+</html>

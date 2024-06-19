@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Teenagers</title>
+    <style>
+        body {
+            background-color: #ecdeff;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #8f4f6d;
+            color: white;
+            font-family: Love;
+        }
+        .logo img {
+            height: 100px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin: 0 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .logo {
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: auto;
+        }
+        footer {
+            background-color: #c999af;
+            color: #fff;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        h3 {
+            color: #333;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            margin: 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            width: 150px;
+            height: auto;
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            border-color: #777;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+            text-align: center;
+        }
+        .modal img {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal:target {
+            display: block;
+        }
+        .modal .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .modal .close:hover,
+        .modal .close:focus {
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="company-name"></div>
+    <header>
+        <div class="logo">
+            <img src="logo.jpeg" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="inicio2.html">Información</a></li>
+                <li><a href="Portafolio.html">Portafolio</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="Untitled-1.php">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2 style="color:#000000; font-family:MV Boli, Helvetica, sans-serif; font-size:130%;"><center>Tu marca nuestro arte</center></h2>
+        <p style="font-family: Century Gothic; font-size:170%;">En Business Teenagers nos especializamos en crear diseños de logotipos digitales. Nuestros diseños son únicos y personalizados para cada cliente. Nuestra misión es ayudar a empresas y emprendedores a destacarse en el mercado mediante la creación de logotipos que reflejen su visión y valores. Nos comprometemos a proporcionar diseños de alta calidad que cuenten una historia y dejen una impresión duradera.</p>
+    </div>
+    <h3><center>Logotipos</center></h3>
+    <div class="gallery">
+        <figure>
+            <a href="#img1"><img src="1.jpeg" alt="oliviajajaja"></a>
+            <figcaption>Logo Clarity: $120</figcaption>
+        </figure>
+        <figure>
+            <a href="#img2"><img src="2.jpeg" alt="Logotipo 2"></a>
+            <figcaption>Logo Gothic Elegance: $150 </figcaption>
+        </figure>
+        <figure>
+            <a href="#img3"><img src="3.jpeg" alt="Logotipo 3"></a>
+            <figcaption>Logo Essence: $180</figcaption>
+        </figure>
+        <figure>
+            <a href="#img4"><img src="4.jpeg" alt="Logotipo 4"></a>
+            <figcaption>Logo Palette: $220</figcaption>
+        </figure>
+        <figure>
+            <a href="#img5"><img src="5.jpeg" alt="Logotipo 5"></a>
+            <figcaption>Logo Stellar Design: $140 </figcaption>
+        </figure>
+        <figure>
+            <a href="#img6"><img src="6.jpeg" alt="Logotipo 6"></a>
+            <figcaption>Logo Minimalist: $100</figcaption>
+        </figure>
+    </div>
+    <!-- Modales para las imágenes -->
+    <div id="img1" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="1.jpeg" alt="oliviajajaja">
+    </div>
+    <div id="img2" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="2.jpeg" alt="Logotipo 2">
+    </div>
+    <div id="img3" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="3.jpeg" alt="Logotipo 3">
+    </div>
+    <div id="img4" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="4.jpeg" alt="Logotipo 4">
+    </div>
+    <div id="img5" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="5.jpeg" alt="Logotipo 5">
+    </div>
+    <div id="img6" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="6.jpeg" alt="Logotipo 6">
+    </div>
+    <nav>
+        <p>Busssines Teenagers 2024 Ⓒ Todos los Derechos Reservados.</p>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Formularios</title>
+    <style>
+        body {
+            font-family: Cooper Black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ecdeff;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        nav {
+            background-color: #8f4f6d;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #8f4f6d;
+            color: white;
+            width: 100%;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin: 0 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-family: Hey Comic;
+        }
+        nav a:hover {
+            background-color: #999999;
+        }
+        footer {
+            background-color: #8f4f6d;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="nuestrapagina web.html">Inicio</a></li>
+                <li><a href="inicio2.html">Información</a></li>
+                <li><a href="Portafolio.html">Portafolio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="formularios reveca.php">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="form-container">
+        <h1>Formulario de Contacto</h1>
+        <form onsubmit="enviarFormulario(event)">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>Busssines Teenagers 2024 Ⓒ Todos los Derechos Reservados.</p>
+    </footer>
+    <script>
+        async function enviarFormulario(event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+
+            const response = await fetch('http://localhost:3000/submit-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ nombre, email, telefono })
+            });
+
+            const result = await response.text();
+            alert(result);
+        }
+    </script>
+</body>
+</html>
